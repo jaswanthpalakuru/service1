@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  service1:
+    image: node_basic_app
+    ports:
+    # - local port : container internal port
+      - 3002:3002
+    volumes:
+      - ./:/app
+    # networks:
+    #   - mynetwork
+networks:
+  my-network:
+#     external: true
